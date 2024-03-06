@@ -63,4 +63,10 @@ const powerOfEveryNumber=ages.map((value)=>{
   return value**2
 })
 console.log(powerOfEveryNumber);
-const sortedCompanies=
+const sortedCompanies=companies.sort((c1,c2){
+  if(c1.start>c2.start){
+    return 1
+  }else{
+    return -1;
+  }
+})
