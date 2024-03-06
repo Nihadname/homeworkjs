@@ -17,18 +17,26 @@ for (let i = 0; i < companies.length; i++) {
 companies.forEach(function (company) {
   console.log(company.name);
 })
-function IsDrinking(){
-let canDrink = [];
-for (let i = 0; ages.length; i++) {
-  if (ages[i] >= 21) {
-    canDrink.push(ages[i]);
+function IsDrinking() {
+  let canDrink = [];
+  for (let i = 0; ages.length; i++) {
+    if (ages[i] >= 21) {
+      canDrink.push(ages[i]);
+    }
   }
-}
 }
 console.log(IsDrinking());
 
-const canDrink2=ages.filter(function(age){
-  if(age>=21){
+const canDrink2 = ages.filter(function (age) {
+  if (age >= 21) {
     return true;
   }
+})
+console.log(canDrink2);
+const canDrink3 = ages.filter(age => age >= 21);
+console.log(canDrink3);
+
+
+const retailCompanies=companies.filter((company)=>{
+
 })
