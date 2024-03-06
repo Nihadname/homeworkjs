@@ -17,10 +17,18 @@ for (let i = 0; i < companies.length; i++) {
 companies.forEach(function (company) {
   console.log(company.name);
 })
-
+function IsDrinking(){
 let canDrink = [];
 for (let i = 0; ages.length; i++) {
   if (ages[i] >= 21) {
     canDrink.push(ages[i]);
   }
 }
+}
+console.log(IsDrinking());
+
+const canDrink2=ages.filter(function(age){
+  if(age>=21){
+    return true;
+  }
+})
