@@ -38,5 +38,7 @@ console.log(canDrink3);
 
 
 const retailCompanies=companies.filter((company)=>{
-
+if(company.category=="retail"){
+  return true;
+}
 })
