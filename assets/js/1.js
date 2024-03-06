@@ -19,7 +19,6 @@ const gettingItsLettersCount2 = str.split(" ").map(myFunction);
 function myFunction(value) {
     return value.length;
 }
-
 console.log(`2ci usul : ${gettingItsLettersCount2}`);
 const gettingItsLettersCount3 = str.split(" ").map(value => value.length);
 console.log(`3ci usul : ${gettingItsLettersCount3}`);let lengthArray=[];
