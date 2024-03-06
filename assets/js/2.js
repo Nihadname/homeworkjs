@@ -45,29 +45,67 @@ const retailCompanies = companies.filter((company) => {
 })
 console.log(retailCompanies);
 const retailCompanies2 = companies.filter(company => company.category === "retail");
-let GettingStartOfTheCompanies=companies.filter(company=>(company.start>=1981&&company.start<1990));
+let GettingStartOfTheCompanies = companies.filter(company => (company.start >= 1981 && company.start < 1990));
 console.log(GettingStartOfTheCompanies);
-const lasted10Years=companies.filter(company=>(company.end-company.start>10));
+const lasted10Years = companies.filter(company => (company.end - company.start > 10));
 console.log(lasted10Years);
 
-const companyNames=companies.map((company)=>{
-return company.name;
+const companyNames = companies.map((company) => {
+  return company.name;
 })
 console.log(companyNames);
-const testMap=companies.map((company)=> `${company.name} [${company.start}-${company.end}]`)
+const testMap = companies.map((company) => `${company.name} [${company.start}-${company.end}]`)
 console.log(testMap);
 
-const ageSquare=ages.map(value=>Math.sqrt(value));
+const ageSquare = ages.map(value => Math.sqrt(value));
 console.log(ageSquare);
-const powerOfEveryNumber=ages.map((value)=>{
-  return value**2
+const powerOfEveryNumber = ages.map((value) => {
+  return value ** 2
 })
 console.log(powerOfEveryNumber);
-const sortedCompanies=companies.sort((c1,c2)=>{
-  if(c1.start>c2.start){
+const sortedCompanies = companies.sort((c1, c2) => {
+  if (c1.start > c2.start) {
     return 1
-  } 
-  else{
+  }
+  else {
     return -1;
   }
 })
+const sortedCompanies2 = companies.sort((a, b) => (a.start > b.end ? 1 : -1));
+console.log(sortedCompanies2);
+const sortAges = ages.sort((a, b) => a - b);
+console.log(sortAges);
+
+let counter = 0;
+for (let i = 0; i < ages.length; i++) {
+  counter += ages[i];
+}
+console.log(counter);
+const ageSum = ages.reduce((total, age) => {
+  return total += age;
+}, 0);
+console.log(ageSum);
+let ageSum2 = ages.reduce(function (toal, age) {
+  return toal += age;
+}, 0);
+console.log(ageSum2);
+const ageSum3 = ages.reduce((total, age) => total += age, 0)
+console.log(ageSum3);
+
+const totalYears = companies.reduce(function (total, company) {
+  return total += (company.end + company.start);
+}, 0)
+console.log(totalYears);
+const totalYears2 = companies.reduce((total, company) => {
+  return total += (company.end + company.start);
+}, 0)
+console.log(totalYears2);
+const totalYears3 = companies.reduce((total, company) => total += (company.end + company.start), 0);
+console.log(totalYears3);
+
+const combnined = ages.map(age => age * 2)
+.filter(age => age >= 40)
+.sort((a, b) => a - b)
+.reduce((a, b) => a + b, 0);
+
+console.log(combnined);
