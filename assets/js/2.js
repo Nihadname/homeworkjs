@@ -37,8 +37,13 @@ const canDrink3 = ages.filter(age => age >= 21);
 console.log(canDrink3);
 
 
-const retailCompanies=companies.filter((company)=>{
-if(company.category=="retail"){
-  return true;
-}
+const retailCompanies = companies.filter((company) => {
+  if (company.category == "retail") {
+    return true;
+  }
 })
+console.log(retailCompanies);
+const retailCompanies2 = companies.filter(company => company.category === "retail")
+
+let GettingStartOfTheCompanies=companies.filter(company=>(company.start>=1981&&company.start<1990));
+console.log(GettingStartOfTheCompanies);
