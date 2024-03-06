@@ -24,6 +24,7 @@ function IsDrinking() {
       canDrink.push(ages[i]);
     }
   }
+  return canDrink;
 }
 console.log(IsDrinking());
 
@@ -43,7 +44,23 @@ const retailCompanies = companies.filter((company) => {
   }
 })
 console.log(retailCompanies);
-const retailCompanies2 = companies.filter(company => company.category === "retail")
-
+const retailCompanies2 = companies.filter(company => company.category === "retail");
 let GettingStartOfTheCompanies=companies.filter(company=>(company.start>=1981&&company.start<1990));
 console.log(GettingStartOfTheCompanies);
+const lasted10Years=companies.filter(company=>(company.end-company.start>10));
+console.log(lasted10Years);
+
+const companyNames=companies.map((company)=>{
+return company.name;
+})
+console.log(companyNames);
+const testMap=companies.map((company)=> `${company.name} [${company.start}-${company.end}]`)
+console.log(testMap);
+
+const ageSquare=ages.map(value=>Math.sqrt(value));
+console.log(ageSquare);
+const powerOfEveryNumber=ages.map((value)=>{
+  return value**2
+})
+console.log(powerOfEveryNumber);
+const sortedCompanies=
